@@ -1,1 +1,1 @@
-
+$("body").css("background", "grey");
