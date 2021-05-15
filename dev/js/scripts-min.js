@@ -1,1 +1,1 @@
-!function(){"use strict";$("body").css("background","grey")}();
+!function(){"use strict";$("body").css("background","lightYellow")}();
