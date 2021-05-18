@@ -101,6 +101,22 @@
       "oAP" : "\/dev\/content\/_hero.html",
       "oF" : 0
     },
+    "\/dev\/content\/_localPartners.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/_localPartners.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/_MeetUs.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/_MeetUs.html",
+      "oF" : 0
+    },
     "\/dev\/content\/_whatsnew.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -121,7 +137,7 @@
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/dev\/content\/hero-2.html",
       "oF" : 0
     },
