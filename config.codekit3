@@ -61,6 +61,14 @@
       "oAP" : "\/design\/structure-tags.sketch",
       "oF" : 0
     },
+    "\/dev\/content\/_contact.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/_contact.html",
+      "oF" : 0
+    },
     "\/dev\/content\/_footer.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -133,6 +141,19 @@
       "oAP" : "\/dev\/global\/scripts.html",
       "oF" : 0
     },
+    "\/dev\/img\/AssocBusinesses.png" : {
+      "ft" : 32768,
+      "iS" : 72230,
+      "oA" : 0,
+      "oAP" : "\/dev\/img\/AssocBusinesses.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/dev\/img\/Companylogo1.png" : {
       "ft" : 32768,
       "iS" : 13079,
@@ -151,6 +172,19 @@
       "iS" : 617,
       "oA" : 0,
       "oAP" : "\/dev\/img\/directionlogo.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/dev\/img\/envelope.png" : {
+      "ft" : 32768,
+      "iS" : 6758,
+      "oA" : 0,
+      "oAP" : "\/dev\/img\/envelope.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -383,6 +417,17 @@
       "oAP" : "\/dev\/index.html",
       "oF" : 0
     },
+    "\/dev\/js\/scripts-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/dev\/js\/scripts-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/dev\/js\/scripts.js" : {
       "bF" : 4,
       "ft" : 64,
@@ -534,6 +579,18 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/dev\/scss\/styles.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/dev\/scss\/styles-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/dev\/scss\/styles.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -553,6 +610,17 @@
       "oA" : 2,
       "oAP" : "\/node_modules",
       "oF" : 0
+    },
+    "\/node_modules\/jquery\/dist\/jquery.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/node_modules\/jquery\/dist\/jquery-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/package-lock.json" : {
       "ft" : 524288,
