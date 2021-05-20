@@ -1,30 +1,34 @@
 /* =============
     Header
 ============= */
-<header>
-	<div>
-		<section id="burger-container">
-			<i class="fas fa-bars nav-btns" id="burger-icon"></i>
-		</section>
+header {
+	background-color: $yellow2;
+	display: grid;
 
-		<nav id="nav-container" data-nav="main-navigation">
-			<ul>
-				<li>
-					<a href="#hero" class="nav-btns"
-						><img
-							src="img/header/logo.svg"
-							alt="robot logo"
-							class="show-for-lg"
-					/></a>
-				</li>
-				<li><a href="#history" class="nav-btns">History</a></li>
-				<li><a href="#skills" class="nav-btns">Skills</a></li>
-				<li><a href="#skynet" class="nav-btns">Skynet</a></li>
-			</ul>
-		</nav>
+	@include xl {
+		grid-template-areas: ". header .";
+		grid-template-columns: auto 1200px auto;
+	}
 
-		<section id="button-container">
-			<button>Survival Guide</button>
-		</section>
-	</div>
-</header>
+	>div {
+		@include xl {
+			grid-area: header;
+		}
+
+		section {
+			padding: 15px;
+
+			img {
+				width: 96px;
+
+				@include md {
+					width: 123px;
+				}
+
+				@include lg {
+					width: 150px;
+				}
+			}
+		}
+	}
+}

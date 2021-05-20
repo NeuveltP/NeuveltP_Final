@@ -1,0 +1,59 @@
+.whatsnew {
+	margin: 10px;
+
+	h1 {
+		font-weight: 400;
+		font-size: rem-calc(27);
+	}
+
+	li {
+		background: $lightYellow;
+		margin-bottom: 15px;
+		box-shadow: 1px 1px 3px $brighterYellow;
+
+		.new-content {
+			padding: 0 30px 30px;
+		}
+
+		button {
+			background: $brighterYellow;
+			border: none;
+			padding: 5px 10px;
+		}
+
+		p {
+			font-size: rem-calc(16);
+			line-height: 1.4;
+		}
+	}
+
+	@include md {
+		width: 75%;
+		margin: 30px auto;
+	}
+}
+
+.new-image {
+	height: 180px;
+}
+
+#new-gallery-1 {
+	.new-image {
+		background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/whatsnew1.png") no-repeat;
+		background-size: cover;
+	}
+}
+
+#new-gallery-2 {
+	.new-image {
+		background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/whatsnew2.png") no-repeat;
+		background-size: cover;
+	}
+}
+
+#new-gallery-3 {
+	.new-image {
+		background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/whatsnew3.png") no-repeat;
+		background-size: cover;
+	}
+}

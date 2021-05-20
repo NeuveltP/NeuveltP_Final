@@ -352,6 +352,15 @@ template {
 /* =============
     Base
 ============= */
+body {
+  margin-top: 140px;
+}
+@media (min-width: 1024px) {
+  body {
+    margin-top: 80px;
+  }
+}
+
 figure {
   margin: 0;
   padding: 0;
@@ -365,13 +374,107 @@ ul li {
   list-style: none;
 }
 
+main {
+  background: lightyellow;
+  display: grid;
+  grid-template-areas: "header" "hero" "whatsnew" "contact" "meetus" "localpartners" "footer";
+}
+
+.header {
+  grid-area: header;
+}
+.header img {
+  display: grid;
+  width: 25%;
+}
+.header ul {
+  display: grid;
+}
+.header a {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .header ul {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .header ul {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .header ul {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.hero {
+  grid-area: hero;
+}
+.hero img {
+  width: 90%;
+}
+.hero ul {
+  display: grid;
+}
+.hero a {
+  display: grid;
+  grid-template-columns: 90% auto;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .hero ul {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .hero ul {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .hero a {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.whatsnew {
+  grid-area: whatsnew;
+}
+.whatsnew ul {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .whatsnew ul {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    grid-template-areas: "new-1 new-1 new-2 new-2" ". new-3 new-3 .";
+  }
+  .whatsnew #new-gallery-1 {
+    grid-area: new-1;
+  }
+  .whatsnew #new-gallery-2 {
+    grid-area: new-2;
+  }
+  .whatsnew #new-gallery-3 {
+    grid-area: new-3;
+  }
+}
+@media (min-width: 1024px) {
+  .whatsnew ul {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "new-1 new-1 new-2 new-2 new-3 new-3";
+  }
+}
+
 /* =============
     Typography
 ============= */
-h1,
-h2,
-h3,
-h4 {
+body {
+  font-family: "Cardo", serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Monserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -383,4 +486,100 @@ p {
 
 .section-title {
   font-weight: 300;
+}
+
+/* =============
+    Buttons
+============= */
+/* =============
+    Forms
+============= */
+[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+  box-shadow: none;
+}
+
+[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus {
+  box-shadow: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  -webkit-appearance: none;
+}
+
+/* =============
+    Navigation
+============= */
+a {
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+/* =============
+    Header
+============= */
+header {
+  background-color: #FFAB4D;
+  display: grid;
+}
+@media (min-width: 1200px) {
+  header {
+    grid-template-areas: ". header .";
+    grid-template-columns: auto 1200px auto;
+  }
+}
+@media (min-width: 1200px) {
+  header > div {
+    grid-area: header;
+  }
+}
+header > div section {
+  padding: 15px;
+}
+header > div section img {
+  width: 96px;
+}
+@media (min-width: 768px) {
+  header > div section img {
+    width: 123px;
+  }
+}
+@media (min-width: 1024px) {
+  header > div section img {
+    width: 150px;
+  }
+}
+
+/* =============
+    Footer
+============= */
+.hero {
+  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/heroimage.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  width: 90%;
+}
+
+.hero ul a {
+  text-decoration: none;
+}
+.hero ul .details h5 {
+  display: none;
+}
+.hero ul .details a {
+  color: #FFAB4D;
+  padding: 20px;
+  min-height: 110px;
+}
+.hero ul .location a {
+  background: #FAE06A;
+}
+.hero ul .location a .bold {
+  font-weight: 600;
+}
+.hero ul .location a:hover {
+  background: #f8d639;
 }

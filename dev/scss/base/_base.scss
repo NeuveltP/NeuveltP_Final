@@ -1,6 +1,13 @@
 /* =============
     Base
 ============= */
+body {
+	margin-top: 140px;
+
+	@include lg {
+		margin-top: 80px;
+	}
+}
 figure {
 	margin: 0;
 	padding: 0;
@@ -12,5 +19,129 @@ ul {
 
 	li {
 		list-style: none;
+	}
+}
+
+main{
+    background: lightyellow;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "hero"
+    "whatsnew"
+	"contact"
+	"meetus"
+	"localpartners"
+    "footer";
+  
+}
+
+.header{
+	grid-area: header;
+	img {
+		display: grid;
+		width: 25%;
+	}
+
+	ul {
+		display: grid;
+	}
+
+	a {
+		display: grid;
+	}
+	@include md {
+		ul {
+			grid-template-columns: repeat(12, 1fr);
+
+			
+		}
+	}
+	@include lg {
+		ul {
+			grid-template-columns: repeat(12, 1fr);
+
+			
+		}
+	}
+	@include xl {
+		ul {
+			grid-template-columns: repeat(12, 1fr);
+
+			
+		}
+	}
+}
+.hero {
+	grid-area: hero;
+
+	img {
+		width: 90%;
+	}
+
+	ul {
+		display: grid;
+	}
+
+	a {
+		display: grid;
+		grid-template-columns: 90% auto;
+		align-items: center;
+	}
+
+	@include md {
+		ul {
+			grid-template-columns: repeat(8, 1fr);
+
+			
+		}
+	}
+
+	@include lg {
+		ul {
+			grid-template-columns: repeat(8, 1fr);
+		}
+
+		a {
+			grid-template-columns: repeat(8, 1fr);
+		}
+
+		
+	}
+}
+.whatsnew {
+	grid-area: whatsnew;
+
+	ul {
+		display: grid;
+	}
+
+	@include md {
+		ul {
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 30px;
+			grid-template-areas:
+				"new-1 new-1 new-2 new-2"
+				". new-3 new-3 .";
+		}
+
+		#new-gallery-1 {
+			grid-area: new-1;
+		}
+		#new-gallery-2 {
+			grid-area: new-2;
+		}
+		#new-gallery-3 {
+			grid-area: new-3;
+		}
+		
+	}
+
+	@include lg {
+		ul {
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-areas:
+				"new-1 new-1 new-2 new-2 new-3 new-3";
+		}
 	}
 }
