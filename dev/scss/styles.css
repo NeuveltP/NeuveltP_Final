@@ -378,6 +378,7 @@ main {
   background: lightyellow;
   display: grid;
   grid-template-areas: "header" "hero" "whatsnew" "contact" "meetus" "localpartners" "footer";
+  grid-gap: 10px;
 }
 
 .header {
@@ -426,6 +427,7 @@ main {
 @media (min-width: 768px) {
   .hero ul {
     grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
   }
 }
 @media (min-width: 1024px) {
@@ -491,6 +493,23 @@ p {
 /* =============
     Buttons
 ============= */
+button {
+  cursor: pointer;
+}
+
+.yellow-button {
+  background-color: #FFD205;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.25s;
+}
+.yellow-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 /* =============
     Forms
 ============= */
@@ -555,31 +574,119 @@ header > div section img {
 /* =============
     Footer
 ============= */
-.hero {
-  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/heroimage.jpg");
+.hero-img {
+  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/heroimage.jpg");
   background-size: cover;
   background-position: center;
   height: 50vh;
   width: 90%;
 }
 
-.hero ul a {
-  text-decoration: none;
+.contactinfo {
+  width: 75%;
+  margin: auto auto;
 }
-.hero ul .details h5 {
-  display: none;
+.contactinfo li {
+  padding: 10px;
+  margin: 10px;
+  background-color: #023047;
 }
-.hero ul .details a {
-  color: #FFAB4D;
+
+form input {
+  width: 80%;
   padding: 20px;
-  min-height: 110px;
 }
-.hero ul .location a {
+
+form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+form button:hover {
+  transition: background-color ease 0.2s;
+}
+
+.search {
+  height: 70px;
+  margin: 30px 10px 0;
+}
+.search form input {
+  border: none;
+  padding: 5px;
+}
+.search form button {
+  border: none;
+  border-radius: 4px;
+  height: 50px;
+}
+
+.footer {
+  background: #023047;
+  padding: 10px;
+}
+.footer h1 {
+  text-align: center;
+}
+
+.footer ul {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.footer ul li {
+  margin: 10px;
+}
+.footer ul a:hover {
+  opacity: 0.5;
+  transition: opacity ease 0.2s;
+}
+
+.whatsnew {
+  margin: 10px;
+}
+.whatsnew h1 {
+  font-weight: 400;
+  font-size: 1.6875rem;
+}
+.whatsnew li {
+  background: #F8CD63;
+  margin-bottom: 15px;
+  box-shadow: 1px 1px 3px #FAE06A;
+}
+.whatsnew li .new-content {
+  padding: 0 30px 30px;
+}
+.whatsnew li button {
   background: #FAE06A;
+  border: none;
+  padding: 5px 10px;
 }
-.hero ul .location a .bold {
-  font-weight: 600;
+.whatsnew li p {
+  font-size: 1rem;
+  line-height: 1.4;
 }
-.hero ul .location a:hover {
-  background: #f8d639;
+@media (min-width: 768px) {
+  .whatsnew {
+    width: 75%;
+    margin: 30px auto;
+  }
+}
+
+.new-image {
+  height: 180px;
+}
+
+#new-gallery-1 .new-image {
+  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/whatsnew1.png") no-repeat;
+  background-size: cover;
+}
+
+#new-gallery-2 .new-image {
+  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/whatsnew2.png") no-repeat;
+  background-size: cover;
+}
+
+#new-gallery-3 .new-image {
+  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/whatsnew3.png") no-repeat;
+  background-size: cover;
 }

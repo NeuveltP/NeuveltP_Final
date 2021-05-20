@@ -33,6 +33,7 @@ main{
 	"meetus"
 	"localpartners"
     "footer";
+	grid-gap:10px;
   
 }
 
@@ -92,7 +93,7 @@ main{
 	@include md {
 		ul {
 			grid-template-columns: repeat(8, 1fr);
-
+			grid-template-rows: repeat(1, 1fr);
 			
 		}
 	}

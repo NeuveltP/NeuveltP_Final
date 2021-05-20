@@ -1,42 +1,20 @@
-.hero{
-	background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/heroimage.jpg");
+.hero-img{
+	background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/heroimage.jpg");
 	background-size: cover;
 	background-position: center;
 	height: 50vh;
 	width: 90%;
 }
+.contactinfo{
+    width: 75%;
+		margin: auto auto;
 
-.hero {
-	ul {
-		a {
-			text-decoration: none;
-		}
-		.details h5 {
-			display: none;
-		}
-		.details a {
-			color: $yellow2;
-			padding: 20px;
-			min-height: 110px;
-		}
-		
-		.location a {
-			background: $brighterYellow;
-
-			.bold {
-				font-weight: 600;
-			}
-
-			&:hover {
-				background: darken($brighterYellow, 10%);
-			}
-		}
-
-		// @include md {
-		// 	.details h5 {
-		// 		display: inline;
-		// 		padding: 10px;
-		// 	}
-		// }
-	}
+        li {
+            padding:10px;
+            margin: 10px;
+            background-color: $buttonBlue;
+        }
 }
+// .hero {
+	
+// }
