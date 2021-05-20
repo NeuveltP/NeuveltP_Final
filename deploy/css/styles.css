@@ -352,6 +352,15 @@ template {
 /* =============
     Base
 ============= */
+body {
+  margin-top: 140px;
+}
+@media (min-width: 1024px) {
+  body {
+    margin-top: 80px;
+  }
+}
+
 figure {
   margin: 0;
   padding: 0;
@@ -365,13 +374,109 @@ ul li {
   list-style: none;
 }
 
+main {
+  background: lightyellow;
+  display: grid;
+  grid-template-areas: "header" "hero" "whatsnew" "contact" "meetus" "localpartners" "footer";
+  grid-gap: 10px;
+}
+
+.header {
+  grid-area: header;
+}
+.header img {
+  display: grid;
+  width: 25%;
+}
+.header ul {
+  display: grid;
+}
+.header a {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .header ul {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .header ul {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .header ul {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.hero {
+  grid-area: hero;
+}
+.hero img {
+  width: 90%;
+}
+.hero ul {
+  display: grid;
+}
+.hero a {
+  display: grid;
+  grid-template-columns: 90% auto;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .hero ul {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .hero ul {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .hero a {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.whatsnew {
+  grid-area: whatsnew;
+}
+.whatsnew ul {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .whatsnew ul {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    grid-template-areas: "new-1 new-1 new-2 new-2" ". new-3 new-3 .";
+  }
+  .whatsnew #new-gallery-1 {
+    grid-area: new-1;
+  }
+  .whatsnew #new-gallery-2 {
+    grid-area: new-2;
+  }
+  .whatsnew #new-gallery-3 {
+    grid-area: new-3;
+  }
+}
+@media (min-width: 1024px) {
+  .whatsnew ul {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "new-1 new-1 new-2 new-2 new-3 new-3";
+  }
+}
+
 /* =============
     Typography
 ============= */
-h1,
-h2,
-h3,
-h4 {
+body {
+  font-family: "Cardo", serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Monserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -383,4 +488,205 @@ p {
 
 .section-title {
   font-weight: 300;
+}
+
+/* =============
+    Buttons
+============= */
+button {
+  cursor: pointer;
+}
+
+.yellow-button {
+  background-color: #FFD205;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.25s;
+}
+.yellow-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* =============
+    Forms
+============= */
+[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+  box-shadow: none;
+}
+
+[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus {
+  box-shadow: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  -webkit-appearance: none;
+}
+
+/* =============
+    Navigation
+============= */
+a {
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+/* =============
+    Header
+============= */
+header {
+  background-color: #FFAB4D;
+  display: grid;
+}
+@media (min-width: 1200px) {
+  header {
+    grid-template-areas: ". header .";
+    grid-template-columns: auto 1200px auto;
+  }
+}
+@media (min-width: 1200px) {
+  header > div {
+    grid-area: header;
+  }
+}
+header > div section {
+  padding: 15px;
+}
+header > div section img {
+  width: 96px;
+}
+@media (min-width: 768px) {
+  header > div section img {
+    width: 123px;
+  }
+}
+@media (min-width: 1024px) {
+  header > div section img {
+    width: 150px;
+  }
+}
+
+/* =============
+    Footer
+============= */
+.hero-img {
+  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/heroimage.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  width: 90%;
+}
+
+.contactinfo {
+  width: 75%;
+  margin: auto auto;
+}
+.contactinfo li {
+  padding: 10px;
+  margin: 10px;
+  background-color: #023047;
+}
+
+form input {
+  width: 80%;
+  padding: 20px;
+}
+
+form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+form button:hover {
+  transition: background-color ease 0.2s;
+}
+
+.search {
+  height: 70px;
+  margin: 30px 10px 0;
+}
+.search form input {
+  border: none;
+  padding: 5px;
+}
+.search form button {
+  border: none;
+  border-radius: 4px;
+  height: 50px;
+}
+
+.footer {
+  background: #023047;
+  padding: 10px;
+}
+.footer h1 {
+  text-align: center;
+}
+
+.footer ul {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.footer ul li {
+  margin: 10px;
+}
+.footer ul a:hover {
+  opacity: 0.5;
+  transition: opacity ease 0.2s;
+}
+
+.whatsnew {
+  margin: 10px;
+}
+.whatsnew h1 {
+  font-weight: 400;
+  font-size: 1.6875rem;
+}
+.whatsnew li {
+  background: #F8CD63;
+  margin-bottom: 15px;
+  box-shadow: 1px 1px 3px #FAE06A;
+}
+.whatsnew li .new-content {
+  padding: 0 30px 30px;
+}
+.whatsnew li button {
+  background: #FAE06A;
+  border: none;
+  padding: 5px 10px;
+}
+.whatsnew li p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .whatsnew {
+    width: 75%;
+    margin: 30px auto;
+  }
+}
+
+.new-image {
+  height: 180px;
+}
+
+#new-gallery-1 .new-image {
+  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/whatsnew1.png") no-repeat;
+  background-size: cover;
+}
+
+#new-gallery-2 .new-image {
+  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/whatsnew2.png") no-repeat;
+  background-size: cover;
+}
+
+#new-gallery-3 .new-image {
+  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/dev/img/whatsnew3.png") no-repeat;
+  background-size: cover;
 }
