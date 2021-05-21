@@ -41,19 +41,24 @@ main{
 	grid-area: header;
 	img {
 		display: grid;
-		width: 25%;
+		width: 35%;
 	}
 
 	ul {
 		display: grid;
+		
 	}
 
 	a {
 		display: grid;
 	}
 	@include md {
+		img {
+			display: grid;
+			width: 45%;
+		}
 		ul {
-			grid-template-columns: repeat(12, 1fr);
+			grid-template-columns: repeat(10, 2fr);
 
 			
 		}

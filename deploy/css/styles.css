@@ -386,7 +386,7 @@ main {
 }
 .header img {
   display: grid;
-  width: 25%;
+  width: 35%;
 }
 .header ul {
   display: grid;
@@ -395,8 +395,12 @@ main {
   display: grid;
 }
 @media (min-width: 768px) {
+  .header img {
+    display: grid;
+    width: 45%;
+  }
   .header ul {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(10, 2fr);
   }
 }
 @media (min-width: 1024px) {
@@ -578,12 +582,12 @@ header > div section img {
   background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/heroimage.jpg");
   background-size: cover;
   background-position: center;
-  height: 50vh;
-  width: 90%;
+  height: 500px;
+  width: 100%;
 }
 
 .contactinfo {
-  width: 75%;
+  width: 65%;
   margin: auto auto;
 }
 .contactinfo li {
@@ -593,7 +597,7 @@ header > div section img {
 }
 
 form input {
-  width: 80%;
+  width: 90%;
   padding: 20px;
 }
 

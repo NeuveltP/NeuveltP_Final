@@ -2,17 +2,19 @@
 	background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/heroimage.jpg");
 	background-size: cover;
 	background-position: center;
-	height: 50vh;
-	width: 90%;
+	height: 500px;
+	width: 100%;
 }
 .contactinfo{
-    width: 75%;
+    width: 65%;
 		margin: auto auto;
+        text-align: center;
 
         li {
             padding:10px;
             margin: 10px;
             background-color: $buttonBlue;
+            
         }
 }
 // .hero {
