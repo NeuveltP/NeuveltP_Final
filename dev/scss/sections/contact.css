@@ -1,0 +1,14 @@
+.contact {
+  grid-area: contact;
+}
+.contact img {
+  width: 50%;
+}
+.contact ul {
+  display: grid;
+}
+.contact a {
+  display: grid;
+  grid-template-columns: 90% auto;
+  align-items: center;
+}

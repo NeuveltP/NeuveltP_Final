@@ -46,6 +46,7 @@ main{
 
 	ul {
 		display: grid;
+		grid-template-columns: repeat(10, 2fr);
 		
 	}
 
@@ -94,11 +95,23 @@ main{
 		grid-template-columns: 90% auto;
 		align-items: center;
 	}
+	#contactinfo{
+		grid-area: continfo;
+	}
+	#herotxt{
+		grid-area: herotext;
+	}
 
 	@include md {
 		ul {
-			grid-template-columns: repeat(8, 1fr);
-			grid-template-rows: repeat(1, 1fr);
+			
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 50px;
+			grid-template-areas:
+			". herotext herotext ."	
+			". continfo continfo .";
+				
 			
 		}
 	}
@@ -145,9 +158,69 @@ main{
 
 	@include lg {
 		ul {
+			grid-gap: 30px;
 			grid-template-columns: repeat(6, 1fr);
 			grid-template-areas:
 				"new-1 new-1 new-2 new-2 new-3 new-3";
 		}
 	}
+}
+.contact{
+	display: grid;
+    grid-area: contact;
+	padding: 0 30px 30px;
+    img{
+        width: 50%;
+    }
+    ul{
+        display: grid;
+    }
+    a {
+		display: grid;
+		grid-template-columns: 90% auto;
+        margin: 20px auto;
+		align-items: center;
+	}
+}
+.meetus{
+	display: grid;
+    grid-area: meetus;
+	padding: 0 30px 30px;
+	
+    img{
+        width: 30%;
+    }
+	ul{
+		display: grid;
+	}
+	
+	@include md{
+		ul{
+			grid-gap: 30px;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+					"bus-1 bus-4"
+					"bus-2 bus-5"
+					"bus-3 bus-6";
+		}
+	
+	#bus1{
+		grid-area: bus-1;
+	}
+	#bus2{
+		grid-area: bus-2;
+	}
+	#bus3{
+		grid-area: bus-3;
+	}
+	#bus4{
+		grid-area: bus-4;
+	}
+	#bus5{
+		grid-area: bus-5;
+	}
+	#bus6{
+		grid-area: bus-6;
+	}
+}
 }

@@ -1,20 +1,20 @@
 form input {
-  width: 90%;
-  padding: 20px;
+  width: 70%;
+  padding: 10px;
 }
 
 form button {
   padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 form button:hover {
   transition: background-color ease 0.2s;
 }
 
 .search {
-  height: 70px;
-  margin: 30px 10px 0;
+  height: 80px;
+  margin: 20px 10px 0;
 }
 .search form input {
   border: none;
