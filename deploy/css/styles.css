@@ -416,6 +416,7 @@ main {
 }
 
 .hero {
+  display: grid;
   grid-area: hero;
 }
 .hero img {
@@ -516,6 +517,31 @@ main {
     grid-gap: 30px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "bus-1 bus-4" "bus-2 bus-5" "bus-3 bus-6";
+  }
+  .meetus #bus1 {
+    grid-area: bus-1;
+  }
+  .meetus #bus2 {
+    grid-area: bus-2;
+  }
+  .meetus #bus3 {
+    grid-area: bus-3;
+  }
+  .meetus #bus4 {
+    grid-area: bus-4;
+  }
+  .meetus #bus5 {
+    grid-area: bus-5;
+  }
+  .meetus #bus6 {
+    grid-area: bus-6;
+  }
+}
+@media (min-width: 1024px) {
+  .meetus ul {
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "bus-1 bus-4 bus-2" "bus-5 bus-3 bus-6";
   }
   .meetus #bus1 {
     grid-area: bus-1;
@@ -644,7 +670,7 @@ header > div section img {
     Footer
 ============= */
 .hero-img {
-  background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/heroimage.jpg");
+  background: url("/deploy/img/heroimage.jpg");
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -679,30 +705,12 @@ header > div section img {
 .contactinfo {
   width: 65%;
   margin: 10px;
-  text-align: center;
-}
-.contactinfo li {
-  background: #F8CD63;
-  margin-bottom: 15px;
-  box-shadow: 1px 1px 3px #FAE06A;
   padding: 10px;
-  margin: 10px;
+  text-align: center;
   background-color: #023047;
 }
-.contactinfo li .new-content {
-  padding: 0 30px 30px;
-}
-.contactinfo li button {
-  background: #FAE06A;
-  border: none;
-  padding: 5px 10px;
-}
-.contactinfo li p {
-  font-size: 1rem;
-  line-height: 1.4;
-}
 @media (min-width: 768px) {
-  .contactinfo li {
+  .contactinfo {
     width: 75%;
     margin: 30px auto;
   }

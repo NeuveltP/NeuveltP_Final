@@ -80,6 +80,7 @@ main{
 	}
 }
 .hero {
+	display: grid;
 	grid-area: hero;
 
 	img {
@@ -187,6 +188,7 @@ main{
     grid-area: meetus;
 	padding: 0 30px 30px;
 	
+	
     img{
         width: 30%;
     }
@@ -222,5 +224,33 @@ main{
 	#bus6{
 		grid-area: bus-6;
 	}
+}
+@include lg{
+	ul{
+		grid-gap: 30px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+				"bus-1 bus-4 bus-2"
+				"bus-5 bus-3 bus-6";
+	}
+
+#bus1{
+	grid-area: bus-1;
+}
+#bus2{
+	grid-area: bus-2;
+}
+#bus3{
+	grid-area: bus-3;
+}
+#bus4{
+	grid-area: bus-4;
+}
+#bus5{
+	grid-area: bus-5;
+}
+#bus6{
+	grid-area: bus-6;
+}
 }
 }
