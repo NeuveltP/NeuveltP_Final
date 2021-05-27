@@ -82,6 +82,7 @@ main{
 .hero {
 	display: grid;
 	grid-area: hero;
+	align-items: center;
 
 	img {
 		width: 90%;

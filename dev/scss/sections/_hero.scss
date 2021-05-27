@@ -1,5 +1,5 @@
 
-  
+  .hero{
 .hero-img{
 	background: url("/deploy/img/heroimage.jpg");
 	background-size: cover;
@@ -39,6 +39,7 @@
         }
 }
 .contactinfo{
+    align-items:center;
     width: 65%;
 		margin: 10px;
         padding:10px;
@@ -52,7 +53,7 @@
             }
             
         }
-    
+  }
 // .hero {
 	
 // }
