@@ -4,26 +4,26 @@
 	h1 {
 		font-weight: 400;
 		font-size: rem-calc(27);
+		padding: 5px 10px;
 	}
 
 	li {
-		background: $lightYellow;
+		background: $prussianBlue;
 		margin-bottom: 15px;
 		box-shadow: 1px 1px 3px $brighterYellow;
 
-		.new-content {
-			padding: 10px 30px 30px;
-		}
+		
 
 		button {
-			background: $brighterYellow;
+			background: $prussianBlue;
 			border: none;
-			padding: 5px 10px;
+			padding:  10px;
 		}
 
 		p {
 			font-size: rem-calc(16);
 			line-height: 1.4;
+			padding: 10px;
 		}
 	}
 
@@ -43,6 +43,7 @@
 
 .new-image {
 	height: 180px;
+	justify-content: center;
 }
 
 #new-gallery-1 {

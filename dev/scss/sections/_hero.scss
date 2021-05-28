@@ -1,5 +1,6 @@
 
   .hero{
+    justify-content: center;
 .hero-img{
 	background: url("/deploy/img/heroimage.jpg");
 	background-size: cover;
@@ -10,12 +11,14 @@
 }
 .herotxt{
     width: 65%;
+    padding:20px;
 		margin: auto auto;
-        text-align: center;
+        text-align: left;
+        justify-content: center;
 
         li {
             //background: $lightYellow;
-            padding:10px;
+            padding:20px;
             margin: 10px;
             background-color: $buttonBlue;
             
@@ -39,8 +42,9 @@
         }
 }
 .contactinfo{
-    align-items:center;
-    width: 65%;
+        justify-content: center;
+        align-items:center;
+       
 		margin: 10px;
         padding:10px;
         text-align: center;
