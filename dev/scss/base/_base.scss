@@ -84,14 +84,13 @@ main{
 	grid-area: hero;
 	align-items: center;
 	justify-content: center;
+	
 	img {
 		width: 100%;
 		justify-content: center;
 	}
 
-	ul {
-		display: grid;
-	}
+	
 
 	a {
 		display: grid;
@@ -188,7 +187,8 @@ main{
 .meetus{
 	display: grid;
     grid-area: meetus;
-	padding: 0 30px 30px;
+	padding: 0 auto 30px;
+	margin: auto;
 	
 	
     img{

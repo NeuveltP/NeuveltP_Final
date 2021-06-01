@@ -425,9 +425,6 @@ main {
   width: 100%;
   justify-content: center;
 }
-.hero ul {
-  display: grid;
-}
 .hero a {
   display: grid;
   grid-template-columns: 90% auto;
@@ -507,7 +504,8 @@ main {
 .meetus {
   display: grid;
   grid-area: meetus;
-  padding: 0 30px 30px;
+  padding: 0 auto 30px;
+  margin: auto;
 }
 .meetus img {
   width: 30%;
@@ -633,6 +631,50 @@ textarea {
 a {
   text-decoration: none;
   transition: 0.25s;
+}
+
+#nav-container {
+  background-color: #FFAB4D;
+  display: none;
+  width: 100px;
+  position: absolute;
+}
+#nav-container .nav-btns {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 auto;
+  color: #023047;
+  padding: 10px 5px;
+  width: 100%;
+  border-bottom: 2px solid transparent;
+}
+#nav-container .nav-btns:hover {
+  background: #F8CD63;
+  border-bottom: 2px solid #F8CD63;
+}
+#nav-container .nav-btns:active {
+  background: #FAE06A;
+}
+#nav-container ul li {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  #nav-container {
+    background-color: none;
+    display: block !important;
+    position: unset;
+    width: auto;
+  }
+  #nav-container .nav-btns {
+    color: #023047;
+  }
+  #nav-container ul {
+    display: flex;
+    align-items: center;
+  }
+  #nav-container ul li {
+    margin: 0 20px;
+  }
 }
 
 /* =============
@@ -835,13 +877,19 @@ form button:hover {
   background-size: cover;
 }
 
+.staff {
+  grid-area: meetus;
+  align-items: center;
+  padding: 10px;
+}
+
 .partners {
   width: 50%;
   padding: 10px;
 }
 
 .busimage {
-  height: 100px;
+  height: 1000px;
 }
 
 #bus1 .busimage {

@@ -5,3 +5,45 @@ a{
     text-decoration: none;
     transition: 0.25s;
 }
+#nav-container{
+    background-color: $yellow2; 
+    display:none;
+    width: 100px;
+    position: absolute;
+    //top: 90px;
+        .nav-btns{
+            display: inline-block;
+            text-decoration: none;
+            margin: 0 auto;
+            color: $prussianBlue;
+            padding: 10px 5px;
+            width: 100%;
+            border-bottom: 2px solid transparent;
+            &:hover{
+                background: $lightYellow;
+                border-bottom: 2px solid $lightYellow;
+            }
+            &:active{
+                background: $brighterYellow;
+            }
+        }
+        ul li {
+            text-align: center;
+        }
+        @include lg {
+            background-color: none;
+            display: block !important;
+            position: unset;
+            width: auto;
+            .nav-btns {
+                color: $prussianBlue;
+            }
+            ul {
+                display: flex;
+                align-items: center;
+            }
+            ul li {
+                margin: 0 20px;
+            }
+        }
+}
