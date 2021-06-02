@@ -43,16 +43,6 @@ main{
 		display: grid;
 		width: 35%;
 	}
-
-	ul {
-		display: grid;
-		grid-template-columns: repeat(10, 2fr);
-		
-	}
-
-	a {
-		display: grid;
-	}
 	@include md {
 		img {
 			display: grid;

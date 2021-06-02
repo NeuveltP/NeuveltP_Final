@@ -375,14 +375,6 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/index.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/deploy\/index.html",
-      "oF" : 0
-    },
     "\/deploy\/js\/scripts-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -421,6 +413,14 @@
       "oAP" : "\/dev\/content\/_contact.html",
       "oF" : 1
     },
+    "\/dev\/content\/_gallery.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/_gallery.html",
+      "oF" : 0
+    },
     "\/dev\/content\/_hero.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -457,9 +457,9 @@
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/dev\/content\/hero-2.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/dev\/global\/_footer.kit" : {
       "cB" : 0,

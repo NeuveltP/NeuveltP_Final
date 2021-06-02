@@ -388,13 +388,6 @@ main {
   display: grid;
   width: 35%;
 }
-.header ul {
-  display: grid;
-  grid-template-columns: repeat(10, 2fr);
-}
-.header a {
-  display: grid;
-}
 @media (min-width: 768px) {
   .header img {
     display: grid;
