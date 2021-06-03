@@ -2,10 +2,10 @@
     Base
 ============= */
 body {
-	margin-top: 140px;
+	margin-top: 0px;
 
 	@include lg {
-		margin-top: 80px;
+		margin-top: 0px;
 	}
 }
 figure {
@@ -30,8 +30,7 @@ main{
     "hero"
     "whatsnew"
 	"contact"
-	"meetus"
-	"localpartners"
+	"staff"
     "footer";
 	grid-gap:10px;
   
@@ -174,9 +173,9 @@ main{
 		align-items: center;
 	}
 }
-.meetus{
+.staff{
 	display: grid;
-    grid-area: meetus;
+    grid-area: staff;
 	padding: 0 auto 30px;
 	margin: auto;
 	

@@ -1,58 +1,77 @@
 .staff{
     grid-area: meetus;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
+}
+button {
+    background: $yellow2;
+    border: none;
+    padding:  10px;
 }
     
     .meetus{
-
+        grid-area: meetus;
+    img{
+        width: 50%;
+    }
+    ul{
+        display: grid;
+    }
+    a {
+		display: grid;
+		grid-template-columns: 90% auto;
+		align-items: center;
+	}
+    
     }
     .partners{
+        align-items: center;
         width: 50%;
-        padding: 10px;
+        padding: 30px;
     }
 
     .busimage{
-        height: 1000px;
+        height: 100px;
     }
     #bus1{
         .busimage{
-            background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/bus1.png") no-repeat;
+            background: url("/deploy/img/bus1.png") no-repeat;
             background-size: cover;
         }
 
     }
     #bus2{
         .busimage{
-            background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/bus2.png") no-repeat;
+            background: url("/deploy/img/bus2.png") no-repeat;
             background-size: cover;
         }
     }
     #bus3{
         .busimage{
-            background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/bus3.png") no-repeat;
+            background: url("/deploy/img/bus3.png") no-repeat;
             background-size: cover;
         }
 
     }
     #bus4{
         .busimage{
-            background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/bus4.png") no-repeat;
+            background: url("/deploy/img/bus4.png") no-repeat;
             background-size: cover;
         }
 
     }
     #bus5{
         .busimage{
-            background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/bus5.png") no-repeat;
+            background: url("/deploy/img/bus5.png") no-repeat;
             background-size: cover;
         }
 
     }
     #bus6{
         .busimage{
-            background: url("/Users/peterneuvelt/Documents/GitHub/NeuveltP_Final/deploy/img/bus6.png") no-repeat;
+            background: url("/deploy/img/bus6.png") no-repeat;
             background-size: cover;
         }
 
     }
+//}

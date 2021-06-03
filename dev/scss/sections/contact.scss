@@ -11,6 +11,11 @@
 		grid-template-columns: 90% auto;
 		align-items: center;
 	}
+    button {
+        background: $yellow2;
+        border: none;
+        padding:  10px;
+    }
 }
 .Mailinglist{
 
