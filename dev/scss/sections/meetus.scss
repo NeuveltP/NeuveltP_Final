@@ -1,5 +1,5 @@
 .staff{
-    grid-area: meetus;
+    grid-area: staff;
     align-items: center;
     padding: 20px;
 }
@@ -11,6 +11,7 @@ button {
     
     .meetus{
         grid-area: meetus;
+        justify-content: center;
     img{
         width: 50%;
     }
@@ -20,23 +21,27 @@ button {
     a {
 		display: grid;
 		grid-template-columns: 90% auto;
-		align-items: center;
+		justify-content: center;
 	}
     
     }
     .partners{
         align-items: center;
+        justify-content: center;
         width: 50%;
-        padding: 30px;
+        padding: 10px 0px;
     }
 
     .busimage{
-        height: 100px;
+        height: 180px;
+        justify-content: center;
+            align-items: center;
     }
     #bus1{
         .busimage{
             background: url("/deploy/img/bus1.png") no-repeat;
             background-size: cover;
+            
         }
 
     }
