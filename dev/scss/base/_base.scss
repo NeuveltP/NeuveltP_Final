@@ -31,6 +31,7 @@ main{
     "whatsnew"
 	"contact"
 	"staff"
+	"partners"
     "footer";
 	grid-gap:10px;
   
@@ -181,11 +182,37 @@ main{
 	
 	
     img{
-        width: 30%;
+        width: 80%;
+		justify-content: center;
+		align-items: center;
     }
 	ul{
 		display: grid;
+		justify-content: center;
+		align-items: center;
 	}
+	
+}
+.partners{
+	display: grid;
+    grid-area: partners;
+	padding: 0 auto 30px;
+	//margin: auto;
+	
+	
+    img{
+        width: 60%;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		
+    }
+	ul{
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+	
 	
 	@include md{
 		ul{

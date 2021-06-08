@@ -377,7 +377,7 @@ ul li {
 main {
   background: lightyellow;
   display: grid;
-  grid-template-areas: "header" "hero" "whatsnew" "contact" "staff" "footer";
+  grid-template-areas: "header" "hero" "whatsnew" "contact" "staff" "partners" "footer";
   grid-gap: 10px;
 }
 
@@ -501,58 +501,79 @@ main {
   margin: auto;
 }
 .staff img {
-  width: 30%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
 }
 .staff ul {
   display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners {
+  display: grid;
+  grid-area: partners;
+  padding: 0 auto 30px;
+}
+.partners img {
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.partners ul {
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 768px) {
-  .staff ul {
+  .partners ul {
     grid-gap: 30px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "bus-1 bus-4" "bus-2 bus-5" "bus-3 bus-6";
   }
-  .staff #bus1 {
+  .partners #bus1 {
     grid-area: bus-1;
   }
-  .staff #bus2 {
+  .partners #bus2 {
     grid-area: bus-2;
   }
-  .staff #bus3 {
+  .partners #bus3 {
     grid-area: bus-3;
   }
-  .staff #bus4 {
+  .partners #bus4 {
     grid-area: bus-4;
   }
-  .staff #bus5 {
+  .partners #bus5 {
     grid-area: bus-5;
   }
-  .staff #bus6 {
+  .partners #bus6 {
     grid-area: bus-6;
   }
 }
 @media (min-width: 1024px) {
-  .staff ul {
+  .partners ul {
     grid-gap: 30px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "bus-1 bus-4 bus-2" "bus-5 bus-3 bus-6";
   }
-  .staff #bus1 {
+  .partners #bus1 {
     grid-area: bus-1;
   }
-  .staff #bus2 {
+  .partners #bus2 {
     grid-area: bus-2;
   }
-  .staff #bus3 {
+  .partners #bus3 {
     grid-area: bus-3;
   }
-  .staff #bus4 {
+  .partners #bus4 {
     grid-area: bus-4;
   }
-  .staff #bus5 {
+  .partners #bus5 {
     grid-area: bus-5;
   }
-  .staff #bus6 {
+  .partners #bus6 {
     grid-area: bus-6;
   }
 }
@@ -895,7 +916,7 @@ button {
 }
 .meetus a {
   display: grid;
-  grid-template-columns: 90% auto;
+  grid-template-columns: 95% auto;
   justify-content: center;
 }
 
@@ -960,4 +981,47 @@ button {
   background: #FFAB4D;
   border: none;
   padding: 10px;
+}
+
+.partners {
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 10px 0px;
+}
+
+.busimage {
+  height: 180px;
+  justify-content: center;
+  align-items: center;
+}
+
+#bus1 .busimage {
+  background: url("/deploy/img/bus1.png") no-repeat;
+  background-size: cover;
+}
+
+#bus2 .busimage {
+  background: url("/deploy/img/bus2.png") no-repeat;
+  background-size: cover;
+}
+
+#bus3 .busimage {
+  background: url("/deploy/img/bus3.png") no-repeat;
+  background-size: cover;
+}
+
+#bus4 .busimage {
+  background: url("/deploy/img/bus4.png") no-repeat;
+  background-size: cover;
+}
+
+#bus5 .busimage {
+  background: url("/deploy/img/bus5.png") no-repeat;
+  background-size: cover;
+}
+
+#bus6 .busimage {
+  background: url("/deploy/img/bus6.png") no-repeat;
+  background-size: cover;
 }

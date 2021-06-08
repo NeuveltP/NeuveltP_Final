@@ -1,0 +1,55 @@
+
+.partners{
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 10px 0px;
+}
+
+.busimage{
+    height: 180px;
+    justify-content: center;
+        align-items: center;
+}
+#bus1{
+    .busimage{
+        background: url("/deploy/img/bus1.png") no-repeat;
+        background-size: cover;
+        
+    }
+
+}
+#bus2{
+    .busimage{
+        background: url("/deploy/img/bus2.png") no-repeat;
+        background-size: cover;
+    }
+}
+#bus3{
+    .busimage{
+        background: url("/deploy/img/bus3.png") no-repeat;
+        background-size: cover;
+    }
+
+}
+#bus4{
+    .busimage{
+        background: url("/deploy/img/bus4.png") no-repeat;
+        background-size: cover;
+    }
+
+}
+#bus5{
+    .busimage{
+        background: url("/deploy/img/bus5.png") no-repeat;
+        background-size: cover;
+    }
+
+}
+#bus6{
+    .busimage{
+        background: url("/deploy/img/bus6.png") no-repeat;
+        background-size: cover;
+    }
+
+}
