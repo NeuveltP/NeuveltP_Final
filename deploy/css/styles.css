@@ -377,19 +377,38 @@ ul li {
 main {
   background: lightyellow;
   display: grid;
-  grid-template-areas: "header" "hero" "whatsnew" "contact" "staff" "partners" "footer";
+  grid-template-areas: "header" "hero" "whatsnew" "contact" "staff" "pheader" "partners" "footer";
   grid-gap: 10px;
 }
 
 .header {
+  display: grid;
   grid-area: header;
+  align-items: center;
+  grid-template-columns: repeat(3, 3);
+}
+.header h1 {
+  padding-left: 70px;
+  align-items: center;
+  justify-content: center;
 }
 .header img {
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
   display: grid;
   width: 35%;
 }
 @media (min-width: 768px) {
+  .header h1 {
+    padding-left: 95px;
+    align-items: center;
+    justify-content: center;
+  }
   .header img {
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
     display: grid;
     width: 45%;
   }
@@ -398,11 +417,39 @@ main {
   }
 }
 @media (min-width: 1024px) {
+  .header h1 {
+    top: 0px;
+    padding-left: 95px;
+    align-items: center;
+    justify-content: center;
+  }
+  .header img {
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    display: grid;
+    width: 50%;
+  }
   .header ul {
     grid-template-columns: repeat(12, 1fr);
   }
 }
 @media (min-width: 1200px) {
+  .header h1 {
+    top: 0px;
+    padding-left: 430px;
+    align-items: center;
+    justify-content: center;
+  }
+  .header img {
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px;
+    display: grid;
+    width: 50%;
+  }
   .header ul {
     grid-template-columns: repeat(12, 1fr);
   }
@@ -438,8 +485,16 @@ main {
   }
 }
 @media (min-width: 1024px) {
-  .hero ul {
-    grid-template-columns: repeat(8, 1fr);
+  .hero img {
+    width: 78%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 11%;
+  }
+  .hero a {
+    display: grid;
+    grid-template-columns: 90% auto;
+    align-items: center;
   }
   .hero a {
     grid-template-columns: repeat(8, 1fr);
@@ -448,15 +503,28 @@ main {
 
 .whatsnew {
   grid-area: whatsnew;
+  display: grid;
+}
+.whatsnew img {
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 .whatsnew ul {
   display: grid;
 }
 @media (min-width: 768px) {
+  .whatsnew img {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    padding: 11%;
+  }
   .whatsnew ul {
-    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
-    grid-template-areas: "new-1 new-1 new-2 new-2" ". new-3 new-3 .";
   }
   .whatsnew #new-gallery-1 {
     grid-area: new-1;
@@ -468,21 +536,17 @@ main {
     grid-area: new-3;
   }
 }
-@media (min-width: 1024px) {
-  .whatsnew ul {
-    grid-gap: 30px;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: "new-1 new-1 new-2 new-2 new-3 new-3";
-  }
-}
 
 .contact {
   display: grid;
   grid-area: contact;
-  padding: 0 30px 30px;
+  padding: 0 10% 20px;
+  align-items: center;
 }
 .contact img {
-  width: 50%;
+  width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .contact ul {
   display: grid;
@@ -492,6 +556,36 @@ main {
   grid-template-columns: 90% auto;
   margin: 20px auto;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .contact {
+    padding: 0 12% 20px;
+  }
+  .contact img {
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .contact img {
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .contact img {
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .staff {
@@ -511,21 +605,25 @@ main {
   align-items: center;
 }
 
+.pheader {
+  display: grid;
+  grid-area: pheader;
+  padding: 0 auto 30px;
+  margin: auto;
+}
+
 .partners {
   display: grid;
   grid-area: partners;
   padding: 0 auto 30px;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
 }
 .partners img {
-  width: 60%;
+  width: 90%;
   justify-content: center;
   align-items: center;
   padding: 10px;
-}
-.partners ul {
-  display: grid;
-  justify-content: center;
-  align-items: center;
 }
 @media (min-width: 768px) {
   .partners ul {
@@ -647,12 +745,23 @@ a {
   transition: 0.25s;
 }
 
+#burger-container {
+  position: absolute;
+  right: 0px;
+}
+@media (min-width: 1024px) {
+  #burger-container {
+    display: none;
+  }
+}
+
 #nav-container {
   background-color: #FFAB4D;
   display: none;
   width: 100px;
   position: absolute;
   right: 0px;
+  top: 40px;
 }
 #nav-container .nav-btns {
   display: inline-block;
@@ -677,8 +786,9 @@ a {
   #nav-container {
     background-color: none;
     display: block !important;
-    position: unset;
+    position: absolute;
     width: auto;
+    top: 0px;
   }
   #nav-container .nav-btns {
     color: #023047;
@@ -688,7 +798,26 @@ a {
     align-items: center;
   }
   #nav-container ul li {
-    margin: 0 20px;
+    margin: 0 100px;
+  }
+}
+@media (min-width: 1200px) {
+  #nav-container {
+    background-color: none;
+    display: block !important;
+    position: unset;
+    width: auto;
+    top: 0px;
+  }
+  #nav-container .nav-btns {
+    color: #023047;
+  }
+  #nav-container ul {
+    display: flex;
+    align-items: center;
+  }
+  #nav-container ul li {
+    margin: 0 10%;
   }
 }
 
@@ -798,15 +927,6 @@ form button:hover {
 .search {
   height: 80px;
   margin: 20px 10px 0;
-}
-.search form input {
-  border: none;
-  padding: 5px;
-}
-.search form button {
-  border: none;
-  border-radius: 4px;
-  height: 50px;
 }
 
 .footer {
@@ -965,9 +1085,7 @@ button {
 
 .contact {
   grid-area: contact;
-}
-.contact img {
-  width: 50%;
+  align-items: center;
 }
 .contact ul {
   display: grid;
@@ -990,38 +1108,32 @@ button {
   padding: 10px 0px;
 }
 
-.busimage {
+.pimages .busimage {
   height: 180px;
   justify-content: center;
   align-items: center;
 }
-
-#bus1 .busimage {
+.pimages #bus1 .busimage {
   background: url("/deploy/img/bus1.png") no-repeat;
   background-size: cover;
 }
-
-#bus2 .busimage {
+.pimages #bus2 .busimage {
   background: url("/deploy/img/bus2.png") no-repeat;
   background-size: cover;
 }
-
-#bus3 .busimage {
+.pimages #bus3 .busimage {
   background: url("/deploy/img/bus3.png") no-repeat;
   background-size: cover;
 }
-
-#bus4 .busimage {
+.pimages #bus4 .busimage {
   background: url("/deploy/img/bus4.png") no-repeat;
   background-size: cover;
 }
-
-#bus5 .busimage {
+.pimages #bus5 .busimage {
   background: url("/deploy/img/bus5.png") no-repeat;
   background-size: cover;
 }
-
-#bus6 .busimage {
+.pimages #bus6 .busimage {
   background: url("/deploy/img/bus6.png") no-repeat;
   background-size: cover;
 }

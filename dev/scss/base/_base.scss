@@ -31,6 +31,7 @@ main{
     "whatsnew"
 	"contact"
 	"staff"
+	"pheader"
 	"partners"
     "footer";
 	grid-gap:10px;
@@ -38,23 +39,57 @@ main{
 }
 
 .header{
+	display: grid;
 	grid-area: header;
+	align-items: center;
+	grid-template-columns: repeat(3, 3);
+
+	h1{
+		padding-left: 70px;
+		align-items: center;
+		justify-content: center;
+	}
 	img {
+		align-items: center;
+		justify-content: center;
+		padding-left: 20px;
 		display: grid;
 		width: 35%;
 	}
+	
 	@include md {
+		h1{
+			padding-left: 95px;
+			align-items: center;
+			justify-content: center;
+		}
 		img {
+			align-items: center;
+			justify-content: center;
+			padding-left: 20px;
 			display: grid;
 			width: 45%;
 		}
 		ul {
 			grid-template-columns: repeat(10, 2fr);
-
-			
 		}
 	}
 	@include lg {
+		//grid-template-columns: repeat(1, 2fr);
+		h1{
+			top:0px;
+			padding-left: 95px;
+			align-items: center;
+			justify-content: center;
+		}
+		img {
+			padding-top: 20px;
+			align-items: center;
+			justify-content: center;
+			padding-left: 20px;
+			display: grid;
+			width: 50%;
+		}
 		ul {
 			grid-template-columns: repeat(12, 1fr);
 
@@ -62,6 +97,20 @@ main{
 		}
 	}
 	@include xl {
+		h1{
+			top:0px;
+			padding-left: 430px;
+			align-items: center;
+			justify-content: center;
+		}
+		img {
+			padding-top: 30px;
+			align-items: center;
+			justify-content: center;
+			padding-left: 200px;
+			display: grid;
+			width: 50%;
+		}
 		ul {
 			grid-template-columns: repeat(12, 1fr);
 
@@ -79,9 +128,6 @@ main{
 		width: 100%;
 		justify-content: center;
 	}
-
-	
-
 	a {
 		display: grid;
 		grid-template-columns: 90% auto;
@@ -109,8 +155,16 @@ main{
 	}
 
 	@include lg {
-		ul {
-			grid-template-columns: repeat(8, 1fr);
+		img {
+			width: 78%;
+			justify-content: center;
+			align-items:center;
+			padding-left: 11%;
+		}
+		a {
+			display: grid;
+			grid-template-columns: 90% auto;
+			align-items: center;
 		}
 
 		a {
@@ -122,18 +176,30 @@ main{
 }
 .whatsnew {
 	grid-area: whatsnew;
+	display: grid;
+	img {
+		width: 40%;
+		justify-content: center;
+		align-items:center;
+		padding: 20px;
+	}
 
 	ul {
 		display: grid;
 	}
 
 	@include md {
+		img {
+			width: 80%;
+			justify-content: center;
+			align-items:center;
+			padding: 11%;
+		}
 		ul {
-			grid-template-columns: repeat(4, 1fr);
+			justify-content: center;
+			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 30px;
-			grid-template-areas:
-				"new-1 new-1 new-2 new-2"
-				". new-3 new-3 .";
+			
 		}
 
 		#new-gallery-1 {
@@ -148,21 +214,26 @@ main{
 		
 	}
 
-	@include lg {
-		ul {
-			grid-gap: 30px;
-			grid-template-columns: repeat(6, 1fr);
-			grid-template-areas:
-				"new-1 new-1 new-2 new-2 new-3 new-3";
-		}
-	}
+	// @include lg {
+	// 	ul {
+	// 		grid-gap: 30px;
+	// 		grid-template-columns: repeat(6, 1fr);
+	// 		grid-template-areas:
+	// 			"new-1 new-1 new-2 new-2 new-3 new-3";
+	// 	}
+	// }
 }
 .contact{
 	display: grid;
     grid-area: contact;
-	padding: 0 30px 30px;
+	padding: 0 10% 20px;
+	align-items: center;
+	
     img{
-        width: 50%;
+        width: 40%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		
     }
     ul{
         display: grid;
@@ -172,6 +243,36 @@ main{
 		grid-template-columns: 90% auto;
         margin: 20px auto;
 		align-items: center;
+	}
+	@include md{
+		padding: 0 12% 20px;
+		
+		img {
+			width: 45%;
+			justify-content: center;
+			align-items:center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		//grid-template-columns: repeat(2, 1fr);
+	}
+	@include lg{
+		img {
+			width: 45%;
+			justify-content: center;
+			align-items:center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+	@include xl{
+		img {
+			width: 30%;
+			justify-content: center;
+			align-items:center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
 	}
 }
 .staff{
@@ -193,25 +294,35 @@ main{
 	}
 	
 }
+.pheader{
+	display: grid;
+	grid-area: pheader;
+	padding: 0 auto 30px;
+	margin: auto;
+}
 .partners{
 	display: grid;
     grid-area: partners;
 	padding: 0 auto 30px;
-	//margin: auto;
+	margin: auto;
+	grid-template-columns: repeat(2, 1fr);
+			
 	
 	
     img{
-        width: 60%;
+        width: 90%;
 		justify-content: center;
 		align-items: center;
+		
 		padding: 10px;
 		
+		
     }
-	ul{
-		display: grid;
-		justify-content: center;
-		align-items: center;
-	}
+	// ul{
+	// 	display: grid;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// }
 	
 	
 	@include md{

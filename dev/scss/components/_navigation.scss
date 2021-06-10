@@ -5,13 +5,21 @@ a{
     text-decoration: none;
     transition: 0.25s;
 }
+#burger-container{
+    position: absolute;
+    right: 0px;
+    @include lg{
+        display: none;
+    }
+}
 #nav-container{
     background-color: $yellow2; 
     display:none;
     width: 100px;
     position: absolute;
     right: 0px;
-    //top: 5px;
+    top: 40px;
+
         .nav-btns{
             display: inline-block;
             text-decoration: none;
@@ -32,10 +40,12 @@ a{
             text-align: center;
         }
         @include lg {
+            //display:grid;
             background-color: none;
             display: block !important;
-            position: unset;
+            position: absolute;
             width: auto;
+            top:0px;
             .nav-btns {
                 color: $prussianBlue;
             }
@@ -44,7 +54,25 @@ a{
                 align-items: center;
             }
             ul li {
-                margin: 0 20px;
+                margin: 0 100px;
+            }
+        }
+        @include xl {
+            //display:grid;
+            background-color: none;
+            display: block !important;
+            position: unset;
+            width: auto;
+            top:0px;
+            .nav-btns {
+                color: $prussianBlue;
+            }
+            ul {
+                display: flex;
+                align-items: center;
+            }
+            ul li {
+                margin: 0 10%;
             }
         }
 }
