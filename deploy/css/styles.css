@@ -540,16 +540,18 @@ main {
 .contact {
   display: grid;
   grid-area: contact;
-  padding: 0 10% 20px;
+  padding: 0 10% 10px;
   align-items: center;
 }
 .contact img {
-  width: 40%;
-  padding-top: 10px;
+  width: 70%;
+  padding-top: 30px;
   padding-bottom: 10px;
 }
 .contact ul {
-  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0px;
 }
 .contact a {
   display: grid;
@@ -562,16 +564,16 @@ main {
     padding: 0 12% 20px;
   }
   .contact img {
-    width: 45%;
+    width: 75%;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 25px;
     padding-bottom: 10px;
   }
 }
 @media (min-width: 1024px) {
   .contact img {
-    width: 45%;
+    width: 75%;
     justify-content: center;
     align-items: center;
     padding-top: 10px;
@@ -580,10 +582,10 @@ main {
 }
 @media (min-width: 1200px) {
   .contact img {
-    width: 30%;
+    width: 75%;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-bottom: 10px;
   }
 }
@@ -591,18 +593,33 @@ main {
 .staff {
   display: grid;
   grid-area: staff;
-  padding: 0 auto 30px;
   margin: auto;
 }
 .staff img {
-  width: 80%;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
 .staff ul {
   display: grid;
-  justify-content: center;
-  align-items: center;
+}
+@media (min-width: 1024px) {
+  .staff img {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .staff img {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .pheader {
@@ -626,10 +643,8 @@ main {
   padding: 10px;
 }
 @media (min-width: 768px) {
-  .partners ul {
-    grid-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "bus-1 bus-4" "bus-2 bus-5" "bus-3 bus-6";
+  .partners {
+    grid-template-columns: repeat(3, 1fr);
   }
   .partners #bus1 {
     grid-area: bus-1;
@@ -650,29 +665,16 @@ main {
     grid-area: bus-6;
   }
 }
-@media (min-width: 1024px) {
-  .partners ul {
-    grid-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "bus-1 bus-4 bus-2" "bus-5 bus-3 bus-6";
+@media (min-width: 1200px) {
+  .partners {
+    grid-template-columns: repeat(6, 1fr);
   }
-  .partners #bus1 {
-    grid-area: bus-1;
-  }
-  .partners #bus2 {
-    grid-area: bus-2;
-  }
-  .partners #bus3 {
-    grid-area: bus-3;
-  }
-  .partners #bus4 {
-    grid-area: bus-4;
-  }
-  .partners #bus5 {
-    grid-area: bus-5;
-  }
-  .partners #bus6 {
-    grid-area: bus-6;
+  .partners img {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1fr;
+    padding: 10px;
   }
 }
 
@@ -1015,70 +1017,64 @@ form button:hover {
 .staff {
   grid-area: staff;
   align-items: center;
-  padding: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
-
-button {
+.staff button {
   background: #FFAB4D;
   border: none;
   padding: 10px;
 }
-
-.meetus {
+.staff .meetus {
   grid-area: meetus;
   justify-content: center;
+  padding: 10%;
 }
-.meetus img {
-  width: 50%;
+.staff .meetus img {
+  width: 60%;
 }
-.meetus ul {
+.staff .meetus ul {
   display: grid;
+  padding: 5px;
 }
-.meetus a {
+.staff .meetus a {
   display: grid;
-  grid-template-columns: 95% auto;
+  grid-template-columns: 90% auto;
   justify-content: center;
+  padding: 5px;
 }
-
-.partners {
+.staff .partners {
   align-items: center;
   justify-content: center;
   width: 50%;
   padding: 10px 0px;
 }
-
-.busimage {
+.staff .busimage {
   height: 180px;
   justify-content: center;
   align-items: center;
 }
-
-#bus1 .busimage {
+.staff #bus1 .busimage {
   background: url("/deploy/img/bus1.png") no-repeat;
   background-size: cover;
 }
-
-#bus2 .busimage {
+.staff #bus2 .busimage {
   background: url("/deploy/img/bus2.png") no-repeat;
   background-size: cover;
 }
-
-#bus3 .busimage {
+.staff #bus3 .busimage {
   background: url("/deploy/img/bus3.png") no-repeat;
   background-size: cover;
 }
-
-#bus4 .busimage {
+.staff #bus4 .busimage {
   background: url("/deploy/img/bus4.png") no-repeat;
   background-size: cover;
 }
-
-#bus5 .busimage {
+.staff #bus5 .busimage {
   background: url("/deploy/img/bus5.png") no-repeat;
   background-size: cover;
 }
-
-#bus6 .busimage {
+.staff #bus6 .busimage {
   background: url("/deploy/img/bus6.png") no-repeat;
   background-size: cover;
 }

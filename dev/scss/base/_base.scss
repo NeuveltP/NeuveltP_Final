@@ -226,18 +226,21 @@ main{
 .contact{
 	display: grid;
     grid-area: contact;
-	padding: 0 10% 20px;
+	padding: 0 10% 10px;
 	align-items: center;
 	
     img{
-        width: 40%;
-		padding-top: 10px;
+        width: 70%;
+		padding-top: 30px;
 		padding-bottom: 10px;
 		
     }
-    ul{
-        display: grid;
-    }
+    ul {
+		justify-content: center;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 0px;
+		
+	}
     a {
 		display: grid;
 		grid-template-columns: 90% auto;
@@ -248,17 +251,17 @@ main{
 		padding: 0 12% 20px;
 		
 		img {
-			width: 45%;
+			width: 75%;
 			justify-content: center;
 			align-items:center;
-			padding-top: 10px;
+			padding-top: 25px;
 			padding-bottom: 10px;
 		}
 		//grid-template-columns: repeat(2, 1fr);
 	}
 	@include lg{
 		img {
-			width: 45%;
+			width: 75%;
 			justify-content: center;
 			align-items:center;
 			padding-top: 10px;
@@ -267,10 +270,10 @@ main{
 	}
 	@include xl{
 		img {
-			width: 30%;
+			width: 75%;
 			justify-content: center;
 			align-items:center;
-			padding-top: 10px;
+			padding-top: 0px;
 			padding-bottom: 10px;
 		}
 	}
@@ -278,19 +281,36 @@ main{
 .staff{
 	display: grid;
     grid-area: staff;
-	padding: 0 auto 30px;
+	//padding: 20%;
 	margin: auto;
 	
 	
     img{
-        width: 80%;
+        width: 100%;
 		justify-content: center;
 		align-items: center;
+		//padding: 0 10% 20px;
     }
 	ul{
 		display: grid;
-		justify-content: center;
-		align-items: center;
+	}
+	@include lg{
+		img {
+			width: 100%;
+			justify-content: center;
+			align-items:center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+	@include xl{
+		img {
+			width: 100%;
+			justify-content: center;
+			align-items:center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
 	}
 	
 }
@@ -318,22 +338,10 @@ main{
 		
 		
     }
-	// ul{
-	// 	display: grid;
-	// 	justify-content: center;
-	// 	align-items: center;
-	// }
 	
 	
 	@include md{
-		ul{
-			grid-gap: 30px;
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-areas:
-					"bus-1 bus-4"
-					"bus-2 bus-5"
-					"bus-3 bus-6";
-		}
+		grid-template-columns: repeat(3, 1fr);
 	
 	#bus1{
 		grid-area: bus-1;
@@ -354,32 +362,18 @@ main{
 		grid-area: bus-6;
 	}
 }
-@include lg{
-	ul{
-		grid-gap: 30px;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-areas:
-				"bus-1 bus-4 bus-2"
-				"bus-5 bus-3 bus-6";
-	}
 
-#bus1{
-	grid-area: bus-1;
-}
-#bus2{
-	grid-area: bus-2;
-}
-#bus3{
-	grid-area: bus-3;
-}
-#bus4{
-	grid-area: bus-4;
-}
-#bus5{
-	grid-area: bus-5;
-}
-#bus6{
-	grid-area: bus-6;
-}
+@include xl{
+	grid-template-columns: repeat(6, 1fr);
+	img{
+        width: 90%;
+		justify-content: center;
+		align-items: center;
+		grid-gap: 1fr;
+		padding: 10px;
+		
+		
+    }
+	
 }
 }

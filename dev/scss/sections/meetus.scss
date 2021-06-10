@@ -1,8 +1,10 @@
 .staff{
     grid-area: staff;
     align-items: center;
-    padding: 20px;
-}
+    padding-left: 10%;
+    padding-right: 10%;
+    
+
 button {
     background: $yellow2;
     border: none;
@@ -12,16 +14,19 @@ button {
     .meetus{
         grid-area: meetus;
         justify-content: center;
+        padding: 10%;
     img{
-        width: 50%;
+        width: 60%;
     }
     ul{
         display: grid;
+        padding: 5px;
     }
     a {
 		display: grid;
-		grid-template-columns: 95% auto;
+		grid-template-columns: 90% auto;
 		justify-content: center;
+        padding: 5px;
 	}
     
     }
@@ -79,4 +84,4 @@ button {
         }
 
     }
-//}
+}
